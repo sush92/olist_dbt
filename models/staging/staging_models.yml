@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: stg_orders
+    description: "Staging model for orders data with quality checks."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+        tests:
+          - not_null
+          - unique
+      - name: order_status
+        description: "Status of the order (e.g., delivered, shipped, canceled, processing)."
+        tests:
+          - accepted_values:
+              values: ['delivered', 'shipped', 'canceled', 'processing']

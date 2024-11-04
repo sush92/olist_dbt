@@ -1,0 +1,6 @@
+SELECT
+    CURRENT_DATE AS evaluation_date,
+    SUM(CASE WHEN order_id IS NOT NULL THEN 1 ELSE 0 END) / COUNT(*) AS order_id_completeness,
+    COUNT(DISTINCT order_id) / COUNT(*) AS order_id_uniqueness,
+    SUM(CASE WHEN delivery_delay > 0 THEN 1 ELSE 0 END) / COUNT(*) AS delayed_orders_ratio
+FROM {{ ref('stg_orders') }};
