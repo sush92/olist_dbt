@@ -73,9 +73,16 @@ The project includes auto-generated documentation with descriptions for each mod
    ```bash
    pip install dbt-postgres
 2. **Set Up Database Connection**: Configure the profiles.yml in the .dbt directory with your PostgreSQL credentials.
-3. **Run dbt Models**:  dbt run
-4. **Run Tests**: dbt test
-5. **View Documentation**: Generate and serve dbt documentation to explore model lineage and metadata: dbt docs generate  , dbt docs serve
+3. **Run dbt Models**:
+   ```bash
+   dbt run
+6. **Run Tests**:
+   ```bash
+   dbt test
+7. **View Documentation**: Generate and serve dbt documentation to explore model lineage and metadata:
+   ```bash
+   dbt docs generate
+   dbt docs serve
 
 Next Steps
 1. The final output models are deployed in the `olist_analytics` schema in PostgreSQL, making them accessible to Tableau for further analysis and visualization. Tableau dashboards created with this data enable analysis of customer behavior, order trends, and delivery performance.
