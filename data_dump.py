@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 DB_CONFIG = {
     'dbname': 'olist_data',
     'user': 'postgres',
-    'password': 'Password9717!',
+    'password': 'Password',
     'host': 'localhost',
     'port': 5432
 }
