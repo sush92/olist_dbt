@@ -12,7 +12,7 @@ DB_CONFIG = {
 }
 
 # Path to your CSV files
-CSV_DIR = '/Users/sushmitha/Documents/projects/olist_dbt_project/Eom-data'  # replace with the path where your CSVs are located
+CSV_DIR = '/Users/Documents/projects/olist_dbt_project/Eom-data'  # replace with the path where your CSVs are located
 
 # Create a connection string for PostgreSQL
 engine = create_engine(f"postgresql+psycopg2://{DB_CONFIG['user']}:{DB_CONFIG['password']}@{DB_CONFIG['host']}:{DB_CONFIG['port']}/{DB_CONFIG['dbname']}")
